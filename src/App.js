@@ -1,6 +1,5 @@
 import React, { useEffect, useState }  from 'react'
 import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const axios=require('axios')
 
@@ -20,14 +19,16 @@ export const AddKey= ()=> {
     useEffect(() => {
       axios.get("http://localhost:6006/api/steamKey").then(response=>setGames(response.data ))
       GameList=games!=''?games.map((game) =>
-      <li>{game.key} <button id={game}  key={game} onClick={() => deleteGame(game.key)}>delete</button></li>
+      <li>{game.key} <button id={game}  key={game} onClick={() => deleteGame(game.key)}>
+<i class="fa-solid fa-xmark"></i>
+      </button></li>
     ):"no key in db or server is offline"
     }, [click,refresh]);
     const keyUpdate=(event)=>{ // Dealing with name field changes to update our state
         setKeys(event.target.value)
     }
     useEffect(() => {
-      axios.get("http://localhost:6006/api/subs/all").then(response=>setAllSubs(response.data ))
+      axios.get("http://localhost:6006/api/subs/all").then(response=>setAllSubs(response.data))
    
     }, [allSubsClick,allSubsRefresh]);
     
@@ -68,9 +69,11 @@ export const AddKey= ()=> {
         });
     }
     //<li>{game} <button id={game}  key={game} onClick={() => deleteGame(game)}>delete</button></li>)
-    let GameList=games!=''? games.map(game=><li>{game.key} <button id={game}  key={game} onClick={() => deleteGame(game.key)}>delete</button></li>):"no key in db or server is offline"
-let ActiveSubsList=activeSubs[0]!=undefined?activeSubs.map(element=><li key={element}>{element}</li>):"You have no active subs"
-let AllSubsList=allSubs[0]!=undefined?allSubs.map(element=><li key={element}>{element}</li>):"You have no subs"
+    let GameList=games!=''? games.map(game=><li>{game.key} <button id={game}  key={game} onClick={() => deleteGame(game.key)}>
+<i class="fa-solid fa-xmark"></i>
+    </button></li>):"no key in db or server is offline"
+let ActiveSubsList=activeSubs[0]!=undefined?activeSubs.map(element=><li key={element}>{element}</li>):"You have no active subs or server is offline"
+let AllSubsList=allSubs[0]!=undefined?allSubs.map(element=><li key={element}>{element}  </li>):"You have no subs or server is offline"
 return (
         <div className="wrapper">
         <div className='game-section'>

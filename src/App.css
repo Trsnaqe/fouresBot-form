@@ -57,12 +57,43 @@
   .buttons{
     margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 5px;
   }
   
+
   .refreshButton{
     margin-left: 10px;
   }
 
-  button{
+  
+  button {
     margin-left: 10px;
+    min-width: 10px;
+    font-family: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 10px;
+    background: gray;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #1d49aa;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+  input{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 200px;
+  height: 40px;
+  
+  background: #EBEBEB;
+  border-radius: 25px;
   }
