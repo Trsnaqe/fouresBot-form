@@ -1,0 +1,68 @@
+
+*{
+    margin:0;
+    padding:0;
+  }
+  .wrapper {
+    background: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+  }
+  .game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    border-radius: 2vw;
+    width: 30vw;
+    height: 85vh;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc ,
+                  -10px -10px 10px #ffffff ;
+  }
+  .allSubs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    border-radius: 2vw;
+    width: 30vw;
+    height: 85vh;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc ,
+                  -10px -10px 10px #ffffff ;
+  }
+  .activeSubs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    border-radius: 2vw;
+    width: 30vw;
+    height: 85vh;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc ,
+                  -10px -10px 10px #ffffff ;
+  }
+  .buttons{
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .refreshButton{
+    margin-left: 10px;
+  }
+
+  button{
+    margin-left: 10px;
+  }
